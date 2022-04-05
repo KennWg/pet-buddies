@@ -1,6 +1,7 @@
 const req = require('express/lib/request');
 const User = require('./User');
 const Pet = require('./Pet');
+const Event = require('./Event');
 
 // Association between User and Pet (one-to-many)
 User.hasMany(Pet, {
@@ -12,4 +13,4 @@ Pet.belongsTo(User, {
 });
 
 
-module.exports = {User, Pet};
+module.exports = {User, Pet, Event};
