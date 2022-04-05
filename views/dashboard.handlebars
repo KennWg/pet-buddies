@@ -1,0 +1,18 @@
+{{! draft code}}
+
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+      {{! update href link here? }}
+      <a href="/dashboard/edit/{{post.id}}"><button class="btn is-danger">Edit post</button></a>
+    </li>
+    {{/each}}
+  </ol>
+  {{else}}
+  <h5 class="pb-4 text-center">You do not have any posts</h5>
+</section>
+{{/if}}

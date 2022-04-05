@@ -1,0 +1,11 @@
+{{! draft code}}
+
+<div>
+    {{#each posts as |post|}}
+
+    {{> post-info post }}
+</div>
+
+{{else}}
+<h5 class="pb-4 text-centered">There are currently no posts</h5>
+{{/each}}
