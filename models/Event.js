@@ -1,6 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const User = require('./User')
 
 class Event extends Model { }
 
@@ -11,7 +10,7 @@ Event.init(
             type: DataTypes.STRING,
             allowNull: false,
             references: {
-                model: User,
+                model: 'user',
                 key: 'id'
             }
 
@@ -30,6 +29,7 @@ Event.init(
     {
         sequelize,
         freezeTableName: true,
+        timestamps: true,
         underscored: true,
         modelName: 'event'
     }

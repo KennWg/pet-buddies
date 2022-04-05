@@ -2,6 +2,7 @@ const req = require('express/lib/request');
 const User = require('./User');
 const Pet = require('./Pet');
 const Event = require('./Event');
+const Comment = require('./Comment');
 
 // Association between User and Pet (one-to-many)
 User.hasMany(Pet, {
@@ -21,5 +22,14 @@ Event.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
+// association between Event and Comment (one-to-many)
+Event.hasMany(Comment, {
+    foreignKey: 'event_id'
+});
 
-module.exports = {User, Pet, Event};
+Comment.belongsTo(Event, {
+    foreignKey: 'event_id'
+})
+
+
+module.exports = {User, Pet, Event, Comment};

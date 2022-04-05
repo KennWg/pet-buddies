@@ -1,6 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const User = require('./User');
 
 class Pet extends Model { }
 
@@ -10,7 +9,7 @@ Pet.init(
             type: DataTypes.STRING,
             allowNull: false,
             references: {
-                model: User,
+                model: 'user',
                 key: 'id'
             }
 
