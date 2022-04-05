@@ -15,6 +15,10 @@ Event.init(
             }
 
         },
+        title: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         id: {
             type: DataTypes.STRING,
             allowNull: false,
