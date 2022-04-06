@@ -29,7 +29,16 @@ Event.hasMany(Comment, {
 
 Comment.belongsTo(Event, {
     foreignKey: 'event_id'
-})
+});
+
+// association between user and comment (one-to-many)
+User.hasMany(Comment, {
+    foreignKey: 'user_id'
+});
+
+Comment.belongsTo(User, {
+    foreignKey: 'user_id'
+});
 
 
 module.exports = {User, Pet, Event, Comment};
