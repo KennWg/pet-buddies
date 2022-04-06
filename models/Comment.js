@@ -10,7 +10,7 @@ Comment.init(
             allowNull: false,
             references: {
                 model: 'event',
-                key: id
+                key: 'id'
             }
         },
         user_id: {
