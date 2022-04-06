@@ -1,7 +1,11 @@
 {
   "name": "pet-buddies",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "\r AS A pet owner\r I WANT an easy way to find other pet owners in my area\r SO THAT I can create opportunities to socialize my pets with theirs\r ",
+=======
+  "description": "## Description",
+>>>>>>> 0c31ae6cb86861f58a363b96bc6b86418536b248
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
