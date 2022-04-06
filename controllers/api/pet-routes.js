@@ -48,7 +48,7 @@ router.get('/:id', (req, res) => {
         ]
     }).then(data => {
         if (!data) {
-            res.status(404).json({ message: 'No user found with this id' });
+            res.status(404).json({ message: 'No pet found with this id' });
             return;
         }
         res.json(data);
@@ -59,6 +59,7 @@ router.get('/:id', (req, res) => {
         });
 });
 
+//POST pet
 router.post('/', (req, res) => {
     Pet.create({
         name: req.body.name,
@@ -67,15 +68,11 @@ router.post('/', (req, res) => {
         size: req.body.size,
         description: req.body.description
     })
-        .then(data => {
-            req.session.save(() => {
-                req.session.user_id = data.id;
-                req.session.username = data.username;
-                req.session.loggedIn = true;
-
-                res.json(data);
-            });
-        })
+        .then(data => res.json(data))
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
 });
 
 module.exports = router;

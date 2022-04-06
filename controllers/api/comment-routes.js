@@ -1,27 +1,20 @@
 const router = require('express').Router();
-const { User, Event, Comment } = require("../../models");
+const { User, Comment } = require("../../models");
+const userAuth = require('../../utils/userAuth');
 
 //GET all route
 router.get('/', (req, res) => {
-    Event.findAll({
+    Comment.findAll({
         attributes: [
             'id',
-            'title',
-            'event',
-            'user_id'
+            'event_id',
+            'user_id',
+            'comment'
         ],
         include: [
             {
                 model: User,
                 attributes: ['username']
-            },
-            {
-                model: Comment,
-                attributes: ['comment'],
-                include: {
-                    model: User,
-                    attributes: ['username']
-                }
             }
         ]
     })
@@ -32,14 +25,14 @@ router.get('/', (req, res) => {
         });
 });
 
-//GET event by ID
+//GET comment by ID
 router.get('/:id', (req, res) => {
-    Event.findOne({
+    Comment.findOne({
         attributes: [
             'id',
-            'title',
-            'event',
-            'user_id'
+            'event_id',
+            'user_id',
+            'comment'
         ],
         where: {
             id: req.params.id
@@ -48,19 +41,11 @@ router.get('/:id', (req, res) => {
             {
                 model: User,
                 attributes: ['username']
-            },
-            {
-                model: Comment,
-                attributes: ['comment'],
-                include: {
-                    model: User,
-                    attributes: ['username']
-                }
             }
         ]
     }).then(data => {
         if (!data) {
-            res.status(404).json({ message: 'No event found with this id' });
+            res.status(404).json({ message: 'No comment found with this id' });
             return;
         }
         res.json(data);
@@ -71,12 +56,12 @@ router.get('/:id', (req, res) => {
         });
 });
 
-//POST event
+//POST comment
 router.post('/', (req, res) => {
-    Event.create({
-        title: req.body.title,
+    Comment.create({
+        event_id: req.body.event_id,
         user_id: req.body.user_id,
-        event: req.body.event
+        comment: req.body.comment
     })
         .then(data => res.json(data))
         .catch(err => {
