@@ -57,7 +57,7 @@ router.get('/:id', (req, res) => {
 });
 
 //POST comment
-router.post('/', (req, res) => {
+router.post('/', userAuth, (req, res) => {
     Comment.create({
         event_id: req.body.event_id,
         user_id: req.body.user_id,

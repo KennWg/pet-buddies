@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Event, Comment } = require("../../models");
+const userAuth = require('../../utils/userAuth');
 
 //GET all route
 router.get('/', (req, res) => {
@@ -72,7 +73,7 @@ router.get('/:id', (req, res) => {
 });
 
 //POST event
-router.post('/', (req, res) => {
+router.post('/', userAuth, (req, res) => {
     Event.create({
         title: req.body.title,
         user_id: req.body.user_id,
