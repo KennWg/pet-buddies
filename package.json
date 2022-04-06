@@ -1,7 +1,7 @@
 {
   "name": "pet-buddies",
   "version": "1.0.0",
-  "description": "",
+  "description": "```\r AS A pet owner\r I WANT an easy way to find other pet owners in my area\r SO THAT I can create opportunities to socialize my pets with theirs\r ```",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -26,6 +26,6 @@
     "express-handlebars": "^6.0.3",
     "express-session": "^1.17.2",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.17.0"
+    "sequelize": "^6.18.0"
   }
 }
