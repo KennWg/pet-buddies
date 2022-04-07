@@ -53,12 +53,13 @@ router.get('/:id', (req, res) => {
 });
 
 // POST user
-router.post('/', userAuth, (req, res) => {
+router.post('/', (req, res) => {
     User.create({
         username: req.body.username,
         password: req.body.password,
         address: req.body.address,
-        city: req.body.city
+        city: req.body.city,
+        email: req.body.email
     })
         .then(data => {
             req.session.save(() => {
