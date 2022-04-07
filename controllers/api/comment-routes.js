@@ -60,7 +60,7 @@ router.get('/:id', (req, res) => {
 router.post('/', userAuth, (req, res) => {
     Comment.create({
         event_id: req.body.event_id,
-        user_id: req.body.user_id,
+        user_id: req.session.user_id,
         comment: req.body.comment
     })
         .then(data => res.json(data))
