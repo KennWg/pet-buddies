@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { User, Pet, Comment, Event } = require("../../models");
-const userAuth = require('../../utils/userAuth');
 
 //GET all route
 router.get('/', (req, res) => {
