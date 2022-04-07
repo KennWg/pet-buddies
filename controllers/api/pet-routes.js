@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Pet } = require("../../models");
+const userAuth = require('../../utils/userAuth');
 
 //GET all route
 router.get('/', (req, res) => {
@@ -60,7 +61,7 @@ router.get('/:id', (req, res) => {
 });
 
 //POST pet
-router.post('/', (req, res) => {
+router.post('/', userAuth, (req, res) => {
     Pet.create({
         name: req.body.name,
         breed: req.body.breed,
