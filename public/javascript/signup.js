@@ -22,6 +22,7 @@ async function signupFormHandler(event) {
   
       if (response.ok) {
         console.log('success');
+        document.location.replace('/profile/');
       } else {
         alert(response.statusText);
       }
