@@ -14,7 +14,7 @@ router.get('/', withAuth, (req, res) => {
     attributes: [
       'id',
       'title',
-      'event',
+      'details',
       'created_at'
     ],
     include: [
@@ -47,7 +47,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
     attributes: [
       'id',
       'title',
-      'event',
+      'details',
       'created_at',
     ],
     include: [
@@ -80,6 +80,12 @@ router.get('/edit/:id', withAuth, (req, res) => {
     .catch(err => {
       res.status(500).json(err);
     });
+});
+
+router.get('/create', (req, res) => {
+  res.render('create-event', {
+    loggedIn: req.session.loggedIn
+  });
 });
 
 module.exports = router;

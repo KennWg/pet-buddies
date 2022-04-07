@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
         attributes: [
             'id',
             'title',
-            'event',
+            'details',
             'user_id'
         ],
         include: [
@@ -39,7 +39,7 @@ router.get('/:id', (req, res) => {
         attributes: [
             'id',
             'title',
-            'event',
+            'details',
             'user_id'
         ],
         where: {
@@ -76,8 +76,8 @@ router.get('/:id', (req, res) => {
 router.post('/', userAuth, (req, res) => {
     Event.create({
         title: req.body.title,
-        user_id: req.body.user_id,
-        event: req.body.event
+        user_id: req.session.user_id,
+        details: req.body.details
     })
         .then(data => res.json(data))
         .catch(err => {

@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
     attributes: [
       'id',
       'title',
-      'event',
+      'details',
       'created_at'
     ],
     include: [
@@ -50,7 +50,7 @@ router.get('/event/:id', (req, res) => {
     attributes: [
       'id',
       'title',
-      'event',
+      'details',
       'created_at'
     ],
     include: [

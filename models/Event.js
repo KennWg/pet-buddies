@@ -25,7 +25,7 @@ Event.init(
             primaryKey: true,
             autoIncrement: true
         },
-        event: {
+        details: {
             type: DataTypes.STRING,
             allowNull: false
         }
