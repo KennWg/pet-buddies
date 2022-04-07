@@ -67,7 +67,8 @@ router.post('/', userAuth, (req, res) => {
         breed: req.body.breed,
         age: req.body.age,
         size: req.body.size,
-        description: req.body.description
+        description: req.body.description,
+        user_id: req.session.user_id
     })
         .then(data => res.json(data))
         .catch(err => {
