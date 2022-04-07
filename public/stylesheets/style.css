@@ -140,6 +140,28 @@
     font-size: 90%;
     color: #7d7d7d;
   }
+
+  .event {
+    margin-bottom: 2%;
+    line-height: 150%;
+  }
+  
+  .event .title span {
+    font-style: italic;
+    font-size: 90%;
+    color: #7d7d7d;
+  }
+
+  .pet {
+    margin-bottom: 2%;
+    line-height: 150%;
+  }
+  
+  .pet .title span {
+    font-style: italic;
+    font-size: 90%;
+    color: #7d7d7d;
+  }
   
   .edit-link {
     display: block;
