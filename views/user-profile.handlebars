@@ -1,0 +1,19 @@
+<section>
+    <h1>{{profile.username}}</h1>
+    <h2>{{profile.email}}</h2>
+</section>
+
+{{#if profile.pet.length}}
+<section>
+  <h2>User Pets</h2>
+  <ol>
+    {{#each profile.pet as |pet|}}
+    <li>
+      {{> pet-info pet}}
+    </li>
+    {{/each}}
+  </ol>
+  {{else}}
+  <h5 class="pb-4 text-center mb-2">No pets for this user!</h5>
+</section>
+{{/if}}

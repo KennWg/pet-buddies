@@ -1,0 +1,14 @@
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+    </li>
+    {{/each}}
+  </ol>
+  {{else}}
+  <h5 class="pb-4 text-center">You do not have any events</h5>
+</section>
+{{/if}}
