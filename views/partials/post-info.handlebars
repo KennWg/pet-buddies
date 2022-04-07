@@ -1,16 +1,5 @@
-{{! draft code}}
-
-<article class="post">
-    <div class="title">
-        <a href="{{post_url}}" target="_blank">{{title}}</a>
-        <span>({{format_url post_url}})</span>
-        </div>
-
-        <div class="meta">
-        |<div>
-            {{post_content}}
-        </div>
-        <b>{{user.username}}</b> |
-        {{format_date created_at}} | <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
-    </div>
+<article class="event">
+  <div class="my-2">
+    <a href="/event/{{id}}">{{title}} - Created on {{format_date created_at}}</a>
+  </div>
 </article>
