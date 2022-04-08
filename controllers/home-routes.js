@@ -59,12 +59,12 @@ router.get('/event/:id', (req, res) => {
         attributes: ['id', 'comment', 'user_id', 'created_at'],
         include: {
           model: User,
-          attributes: ['username']
+          attributes: ['username', 'id']
         }
       },
       {
         model: User,
-        attributes: ['username']
+        attributes: ['username', 'id']
       }
     ]
   })

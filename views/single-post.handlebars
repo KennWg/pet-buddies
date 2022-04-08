@@ -1,7 +1,8 @@
-{{! draft code}}
-
-
-{{> post-info post}}
+<article class="event">
+  <div class="my-2">
+    <a href="/user/{{post.user.id}}">{{post.title}} - Created on {{format_date post.created_at}}</a>
+  </div>
+</article>
 
 {{#if loggedIn}}
 <form class="comment-form">
