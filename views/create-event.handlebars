@@ -1,17 +1,27 @@
+{{!-- Event Creation --}}
+
 <section>
   <a href="/dashboard"> &larr; Back to dashboard</a>
   <h2>
    Create new event:
   </h2>
+
+  {{!-- Users input form for making new event --}}
   <form class="new-post-form">
+
+    {{!-- Event Title --}}
     <div class="form-group">
         <label for="post-title">Title:</label>
       <input class="input form-control" name="post-title" type="text" placeholder="Insert title here" />
     </div>
+
+    {{!-- Event description --}}
     <div class="form-group">
     <label for="post-content">Details:</label>
       <textarea class="textarea form-control" rows="5" name="post-content"></textarea>
     </div>
+
+    {{!-- Submission Button --}}
     <button type="submit" >Create Event</button>
   </form>
 </section>
