@@ -21,33 +21,34 @@
       <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
 
         <nav class="navbar">
-          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-            <img src="/images/petbuddies.jpg">
-            <span class="fs-4">Pet Buddies</span>
-          </a>
 
-          {{#if loggedIn}}
+              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <img src="/images/petbuddies.jpg">
+                <span class="fs-4">Pet Buddies</span>
+              </a>
 
-          <ul class="nav nav-pills">
-            <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="/dashboard" class="nav-link">Dashboard</a></li>
-            <li class="nav-item"><a href="/profile" class="nav-link">Profile</a></li>
-            <li class="nav-item"><a href="/dashboard/create" class="nav-link">Create Event</a></li>
-          </ul>
-          <div class="text-end">
-            <button id="logout" type="button" class="btn btn-primary me-2">Log Out</button>
-          </div>
+              {{#if loggedIn}}
 
-          {{else}}
+              <ul class="nav nav-pills">
+                <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="/dashboard" class="nav-link">Dashboard</a></li>
+                <li class="nav-item"><a href="/profile" class="nav-link">Profile</a></li>
+                <li class="nav-item"><a href="/dashboard/create" class="nav-link">Create Event</a></li>
+              </ul>
+              <div class="text-end">
+                <button id="logout" type="button" class="btn btn-primary me-2">Log Out</button>
+              </div>
 
-          <ul class="nav nav-pills">
-            <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="/login" class="btn btn-primary me-2" role="button">Log In</a></li>
-            <li class="nav-item"><a href="/signup" class="btn btn-primary me-2" role="button">Sign Up</a></li>
-          </ul>
+              {{else}}
 
-          {{/if}}
+              <ul class="nav nav-pills">
+                <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="/login" class="btn btn-primary me-2" role="button">Log In</a></li>
+                <li class="nav-item"><a href="/signup" class="btn btn-primary me-2" role="button">Sign Up</a></li>
+              </ul>
 
+              {{/if}}
+          
         </nav>
 
       </header>

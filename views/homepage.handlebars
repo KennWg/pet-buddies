@@ -1,10 +1,13 @@
 {{! draft code}}
 <h1>Current Events:</h1>
-<div>
-    {{#each posts as |post|}}
 
-    {{> post-info post }}
-</div>
+    <ul class="list-group">
+        {{#each posts as |post|}}
+            <li class="list-group-item">
+                {{> post-info post }}
+            </li>
+    </ul>
+
 
 {{else}}
 <h5 class="pb-4 text-centered">No current Events</h5><br />
