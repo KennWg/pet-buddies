@@ -2,6 +2,9 @@
 ## U of T Coding Boot Camp: Project 2
 ### [Description](#description)  - [User Story](#user-story)  -  [The Team](#the-team)  - [Technologies Used](#technologies-used)  - [Snapshots](#snapshots)  - [Snapshot](#snapshot)  - [Installation](#installation)  - [Usage](#usage) - [Links](#links) - [Installation](#installation) - [Credits](#credits)
 
+
+<img src="./public/images/petbuddies.jpg">
+
 ## Description
 We all love our pets and we want the best for them!
 An important part of that livelihood is socialization
@@ -39,7 +42,7 @@ SO THAT I can create opportunities to socialize my pets with theirs
 
 
 ## Snapshot
-![Pet Buddies](./images/petbuddies.png)
+![Pet Buddies](./public/images/petbuddies.png)
 
 ## Usage
 
@@ -50,7 +53,7 @@ SO THAT I can create opportunities to socialize my pets with theirs
 ## Trello Board
 https://trello.com/b/OOZj68iY/project-2-pet-buddies
 
-![Trello Board](./images/petbuddiestrello.jpg)
+![Trello Board](./public/images/petbuddiestrello.jpg)
 
 ## Credits
 This is our second group project in the Coding Boot Camp provided by [The School of Continuing Studies, University of Toronto](https://learn.utoronto.ca/) and [Trilogy Education Services](https://www.trilogyed.com/). Thanks to Chris, German and Adam for all of their help during this project. 
