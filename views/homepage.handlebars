@@ -6,9 +6,11 @@
     {{#each posts as |post|}}
 
     {{> post-info post }}
-</div>
+
 
 {{else}}
 <h5 class="pb-4 text-centered">No current Events</h5><br />
 <a href="/dashboard/create" class="btn btn-primary me-2" role="button">Create Event</a>
 {{/each}}
+
+</div>
