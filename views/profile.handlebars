@@ -1,13 +1,13 @@
 {{#if pets.length}}
 <section>
   <h2>Your Pets</h2>
-  <ol>
+  <ul class="list-group">
     {{#each pets as |pet|}}
-    <li>
+    <li class="list-group-item">
       {{> pet-info pet}}
     </li>
     {{/each}}
-  </ol>
+  </ul>
   {{else}}
   <h5 class="pb-4 text-center mb-2">You do not currently have any pets added</h5>
 </section>
