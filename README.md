@@ -15,6 +15,7 @@ SO THAT I can create opportunities to socialize my pets with theirs
 
 ## Technologies Used
 - HTML, CSS, Javascript
+- Bootstrap
 - Trello
 - Slack
 - Zoom
@@ -23,7 +24,11 @@ SO THAT I can create opportunities to socialize my pets with theirs
 
 ## Usage
 
-## Deployment
+## Link for Repository
+- GitHub Repo: https://github.com/KennWg/pet-buddies
+
+## Deployment Link
+- Deployed site on Heroku: https://sheltered-oasis-41495.herokuapp.com/
 
 ## Credits
 This is our second group project in the Coding Boot Camp provided by [The School of Continuing Studies, University of Toronto](https://learn.utoronto.ca/) and [Trilogy Education Services](https://www.trilogyed.com/). Thanks to Chris, German and Adam for all of their help during this project. 
