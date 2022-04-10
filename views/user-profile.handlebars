@@ -1,13 +1,19 @@
+{{!-- Page when user clicks on another user profile --}}
+
+{{!-- Other user information --}}
 <section>
-    <h1>{{profile.username}}</h1>
-    <h2>{{profile.email}}</h2>
+    <h1>Username:  {{username}}</h1>
+    <h2>Email:  {{email}}</h2>
+    <p>Address:  {{address}} - {{city}}</p>
 </section>
 
-{{#if profile.pet.length}}
+
+{{!-- Populates their pet info --}}
+{{#if pets.length}}
 <section>
-  <h2>User Pets</h2>
+  <h2>User Pets:</h2>
   <ol>
-    {{#each profile.pet as |pet|}}
+    {{#each pets as |pet|}}
     <li>
       {{> pet-info pet}}
     </li>

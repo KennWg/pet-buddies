@@ -1,14 +1,17 @@
+{{!-- Dashboard with events --}}
+
 {{#if posts.length}}
 <section>
-  <h2>Your Posts</h2>
-  <ol>
+  <h2>Your Events</h2>
+  <ul class="list-group">
     {{#each posts as |post|}}
-    <li>
+    <li class="list-group-item">
       {{> post-info post}}
     </li>
     {{/each}}
-  </ol>
+  </ul>
   {{else}}
-  <h5 class="pb-4 text-center">You do not have any events</h5>
+  <h5 class="pb-4 text-center">You do not have any events</h5><br />
+  <a href="/dashboard/create" class="btn btn-primary me-2" role="button">Create Event</a>
 </section>
 {{/if}}
