@@ -2,23 +2,29 @@
 
 {{!-- Other user information --}}
 <section>
-    <h1>Username:  {{username}}</h1>
-    <h2>Email:  {{email}}</h2>
-    <p>Address:  {{address}} - {{city}}</p>
+  <div class="card border-light mb-3" style="max-width: 18rem;">
+    <div class="card-header">Profile</div>
+    <div class="card-body text-primary">
+      <h3 class="card-title">{{username}}</h3>
+      <h4 class="card-subtitle mb-2 text-muted">{{email}}</h4>
+      <p class="card-text">{{address}} - {{city}}</p>
+    </div>
+  </div>
 </section>
+
 
 
 {{!-- Populates their pet info --}}
 {{#if pets.length}}
 <section>
-  <h2>User Pets:</h2>
-  <ol>
+  <h3 class="text-center">{{username}}'s Pets:</h3>
+  <ul class="list-unstyled">
     {{#each pets as |pet|}}
     <li>
       {{> pet-info pet}}
     </li>
     {{/each}}
-  </ol>
+  </ul>
   {{else}}
   <h5 class="pb-4 text-center mb-2">No pets for this user!</h5>
 </section>
