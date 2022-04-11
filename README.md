@@ -1,6 +1,6 @@
 # <Your-Project-Title> Pet Buddies
 ## U of T Coding Boot Camp: Project 2
-### [Description](#description)  - [User Story](#user-story)  -  [The Team](#the-team)  - [Technologies Used](#technologies-used)  - [Snapshots](#snapshots)  - [Snapshot](#snapshot)  - [Installation](#installation)  - [Usage](#usage) - [Links](#links) - [Installation](#installation) - [Credits](#credits)
+### [Description](#description)  - [User Story](#user-story)  -  [The Team](#the-team)  - [Technologies Used](#technologies-used) - [Snapshot](#snapshot)  - [Installation](#installation)  - [Links](#links) - [Installation](#installation) - [Credits](#credits)
 
 
 <img src="./public/images/petbuddies.jpg">
@@ -43,8 +43,6 @@ SO THAT I can create opportunities to socialize my pets with theirs
 
 ## Snapshot
 ![Pet Buddies](./public/images/petbuddies.png)
-
-## Usage
 
 ## Links
 - GitHub Repo: https://github.com/KennWg/pet-buddies
