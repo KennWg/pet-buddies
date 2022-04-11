@@ -1,18 +1,22 @@
+{{!-- Populates users pets if they exist --}}
+
 {{#if pets.length}}
 <section>
   <h2>Your Pets</h2>
-  <ol>
+  <ul class="list-unstyled">
     {{#each pets as |pet|}}
     <li>
       {{> pet-info pet}}
     </li>
     {{/each}}
-  </ol>
+  </ul>
   {{else}}
   <h5 class="pb-4 text-center mb-2">You do not currently have any pets added</h5>
 </section>
 {{/if}}
 
+
+{{!-- Form for adding pet to user profile --}}
 <h5>Add a pet:</h5>
 <form class="pet-form">
   <div>

@@ -17,7 +17,10 @@ router.get('/:id', (req,res) => {
             return;
         }
         const profile =  data.get({plain: true});
-        res.render('user-profile', profile);
+        res.render('user-profile', {
+            profile,
+            loggedIn: req.session.loggedIn
+        });
     })
         .catch(err => {
             console.log(err);

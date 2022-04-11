@@ -1,8 +1,14 @@
-{{! draft code}}
+{{!-- Page for when users clicks on individual event --}}
 
+{{!-- Event description --}}
+<article class="event">
+  <div class="my-2">
+    <a href="/user/{{post.user.id}}">{{post.title}} - Created on {{format_date post.created_at}}</a><br />
+    {{post.details}}
+  </div>
+</article>
 
-{{> post-info post}}
-
+{{!-- If signed in will show comment box --}}
 {{#if loggedIn}}
 <form class="comment-form">
   <div>
@@ -16,9 +22,10 @@
 </form>
 {{/if}}
 
+{{!-- Prior comments are visible regardless if signed in --}}
 {{> comments post.comments}}
 
-{{! edit src link here}}
+{{! link to JS}}
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
 {{/if}}
